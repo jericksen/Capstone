@@ -1,6 +1,6 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
-![Header](DC Map.png)
+![header](DC Map.png)
 
 ### Project Overview
 *The intent of this project is two-fold:* 
