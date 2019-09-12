@@ -1,6 +1,7 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
-<img src="DC%20Map.png" width="200">
+*Insert DC Map Image*
+<img src="DC_map.png" width="200">
 
 ### Project Overview
 *The intent of this project is two-fold:* 
