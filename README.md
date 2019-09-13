@@ -51,7 +51,10 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-    - <img src="images/Percent_null_values.png" width="200" height="250">
+
+<p align="center">
+     <img src="images/Percent_null_values.png" width="200" height="250">
+</p>
 
 ***
 ***
@@ -64,7 +67,9 @@ The exploratory phase focused on two key themes: DC crime by geographical locati
 
 To start, we offer a graphic that highlights the total crime committed in DC from July '18 - '19. The graphic breaks down the crime counts by the type of crime committed:  
 
-<img src="images/Total_crime_by_offense.png" width="850" height="500">
+<p align="center">
+     <img src="images/Total_crime_by_offense.png" width="800" height="500">
+</p>
 
 ### Month, Weekday, Hour Analysis
 
@@ -114,15 +119,21 @@ Further, we visualized crime on a 12 month animation beginning with August 2018:
 
 Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below as a reference: 
 
-<img src="images/DC_ward_map.png" width="500" height="500">
+<p align="center">
+     <img src="images/DC_ward_map.png" width="500" height="500">
+</p>
 
 We took a at the crime volume by DC ward along with the crime rate per ward compared to the average crime rate: 
 
-<img src="images/DC_crime_by_ward.png" width="800" height="500">
+<p align="center">
+     <img src="images/DC_crime_by_ward.png" width="800" height="500">
+</p>
 
 We visualized all incidents of crime separated by crime to further conceptualize the distribution of wards in DC:
 
-<img src="images/DC_crime_by_ward_map.png" width="800" height="600">
+<p align="center">
+     <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
+</p>
 
 ***
 ***
@@ -135,7 +146,11 @@ The modeling portion of the project includes a number of extra steps taken to fu
 Further steps were necessary to condition the data for modeling. The key steps are included: 
 
 - Split the features 'NEIGHBORHOOD_CLUSTER' and 'VOTING_PRECINCT' from their string counterparts within each instance. Once complete, we removed the string components leaving just the numeric values for the features. The below image highlights the features addressed in this step: 
-    - <img src="images/Features_for_splitting.png" width="300" height="150">
+
+<p align="center">
+     <img src="images/Features_for_splitting.png" width="300" height="150">
+</p>
+
 - Removed empty spaces from the 'BLOCK_GROUP' feature. 
 - Converted all features assigned the wrong data type to integer or float data types. 
 
@@ -144,23 +159,33 @@ Further steps were necessary to condition the data for modeling. The key steps a
 Feature engineering was required to further prepare the data for modeling. The steps are included below: 
 
 - The 'DATE' and 'TIME' features were split into their component parts - see below:
-                         
-<img src="images/Date_time_unsplit.png" width="175" height="125">
-                         
-<img src="images/Date_time_split.png" width="300" height="150">
-    
+
+<p align="center">
+     <img src="images/Date_time_unsplit.png" width="175" height="125">
+</p>                    
+
+<p align="center">
+     <img src="images/Date_time_split.png" width="300" height="150">
+</p> 
+
 - Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
 
+<p align="center">
      <img src="images/Feature_dummification.png" width="500" height="150">
+</p>
     
 - Data rebalancing via the SKlearn method SMOTE was necessary due to class imabalance:
 
+<p align="center">
      <img src="images/Label_imbalance.png" width="600" height="500">
+</p>
     
 - Rescaling the feature variables was the final engineering step. Doing so ensures no single feature has an outsized impact on model performances:
 
-     <img src="images/Scaled_data.png" width="800" height="150">
-
+<p align="center">
+     <img src="images/Scaled_data.png" width="750" height="150">
+</p>
+     
 ### Model Selection
 
 With our data conditioned, features engineered for modeling and our class labels encoded, the data was ready for modeling. 
@@ -177,7 +202,9 @@ We began the modeling portion by instantiating the following classifiers for sid
 
 The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
 
+<p align="center">
      <img src="images/Model_cv_scores.png" width="500" height="450">
+</p>
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
@@ -195,11 +222,15 @@ With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 
 
 We assessed the confusion matrix to visualize the model's misclassification:
 
-<img src="images/Final_confusion_matrix.png" width="600" height="500">
+<p align="center">
+     <img src="images/Final_confusion_matrix.png" width="600" height="500">
+</p>
 
 **Feature Importance**
 
 Further, we assessed the which dimensions within our dataset contribute the most predictive information for classifying crime incidents: 
 
-<img src="images/Final_feature_importance.png" width="700" height="500">
+<p align="center">
+     <img src="images/Final_feature_importance.png" width="700" height="500">
+</p>
 
