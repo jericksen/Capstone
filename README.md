@@ -40,7 +40,7 @@ The data cleaning process was fairly straight forward as the datasets themselves
 
 The image below highlights the features contained within the crime datasets:
 
-*Insert 'Features' Image*
+<img src="images/Features.png" width="700" height="400">
 
 **Data Cleaning Highlights:**
 
@@ -52,4 +52,4 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-    - <img src="images/Percent_null_values.png" width="300" height="400">
+    - <img src="images/Percent_null_values.png" width="200" height="300">
