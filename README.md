@@ -2,8 +2,6 @@
 
 <img src="images/DC.png" width="850" height="400">
 
-***
-
 ### Project Overview
 The intent for this project is two-fold: 
 
@@ -32,3 +30,26 @@ For both parts, we'll walk through the methods used for obtaining, cleaning, ana
 The crime data for this project was obtained through the Open Data DC platform maintained by the DC government: https://opendata.dc.gov. The particular dataset used is available for download via the following URL: https://opendata.dc.gov/datasets/crime-incidents-in-2019. 
 
 Crime data was extracted for both 2018 and 2019. Both raw datasets can be found in the project repository titled: 'Crime_Incidents_in_2018.csv' & 'Crime_Incidents_in_2019.csv'.
+
+***
+***
+## Data Cleaning
+*The data cleaning steps are outlined in the accompanying jupyter notebook titled 'Capstone_EDA'.*
+
+The data cleaning process was fairly straight forward as the datasets themselves are well kept. The 2018 dataset contained 33782 crime instances, while the 2019 dataset at the time of download contained 20620 crime instances.
+
+The image below highlights the features contained within the crime datasets:
+
+*Insert 'Features' Image*
+
+**Data Cleaning Highlights:**
+
+- Features Removed: 
+    - X', 'Y', 'CCN', 'BLOCK', 'XBLOCK', 'YBLOCK', 'ANC', 'PSA', BID', 'START_DATE', 'END_DATE'
+- Features Split for Modeling Purposes (split by delimiters into individual features, i.e., 'DATE' --> 'DAY, 'MONTH, 'YEAR'): 
+    - 'DATE', 'TIME'
+- Features Added: 
+    - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
+- Null Values Removed: 
+    - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
+    - <img src="images/Percent_null_values.png" width="300" height="400">
