@@ -51,8 +51,7 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-
-<img src="images/Percent_null_values.png" width="200" height="250">
+    - <img src="images/Percent_null_values.png" width="200" height="250">
 
 ***
 ***
@@ -63,53 +62,57 @@ The exploratory phase focused on two key themes: DC crime by geographical locati
 
 ### Total Crime by Offense
 
-To start, we offer a visualization that accounts for total crime by type: 
+To start, we offer a graphic that highlights the total crime committed in DC from July '18 - '19. The graphic breaks down the crime counts by the type of crime committed:  
 
-<img src="images/Total_crime_by_offense.png" width="800" height="500">
+<img src="images/Total_crime_by_offense.png" width="850" height="500">
 
 ### Month, Weekday, Hour Analysis
 
-In this section, we extract total crime volumes by the month, weekday, and hour to assess any patterns based of time dimensions:
+In this section, we extract total crime volumes by the month, weekday, and hour to assess any cyclical patterns based on time & day dimensions:
 
 **Total Crime Incidents by Month**
 
-Here, we visualize total crime incidents in DC by month to extract any seasonality among crime volumes: 
+Here, we illustrate total crime incidents by month to extract any seasonality among crime volumes: 
 
-<img src="images/Total_crime_by_month.png" width="800" height="500">
+<img src="images/Total_crime_by_month.png" width="850" height="500">
 
-Based on the analysis, there is fairly significant seasonality with respect to total crime in DC. The delta between the months of August (peak) and February (bottom) of ~31%. A portion of this spread can be explained by the number of days in each month, however, accounting for that effect still produces a significant delta. 
+Based on the data, there appears a fairly significant seasonal effect with respect to total crime in DC. The delta between the months of August (peak) and February (bottom) represents a ~31% drop in total crimes committed. 
+
+Note: A portion of the variation between months can be explained by the total number of days in each month, however, the effect of this is relatively insignificant and does not account for the large drop in total crime from August to February. A seasonal cycle likely explains the majority of the significant variation between August and February. 
 
 **Total Crime Incidents by Weekday**
 
 We visualized the total crime incidents by weekday to extract the effect, if any, of the weekday on the propensity for a crime to occur:
 
-<img src="images/Total_crime_by_weekday.png" width="800" height="500">
+<img src="images/Total_crime_by_weekday.png" width="850" height="500">
 
-From the analysis, it appears crime volumes do not vary by weekday in a significant way. 
+From the analysis, it appears crime volumes do not vary by weekday in a significant way. A crime seems just as likely to occur on a particular weekday vs. any other day of the week. 
 
 **Total Crime Incidents by Hour**
 
-Our next visualizations parses the total volume of crime by hour. The goal is to highlight trends that exist in terms of crime volumes within a 24 hour cycle:
+Our next two graphics parse the total volume of crime by hour. The goal is to highlight trends that exist in terms of crime volumes within a 24 hour cycle:
 
-<img src="images/Total_crime_by_hour.png" width="800" height="500">
+<img src="images/Total_crime_by_hour.png" width="850" height="500">
 
-<img src="images/Total_crime_by_hour_by_offense.png" width="800" height="500">
+<img src="images/Total_crime_by_hour_by_offense.png" width="850" height="500">
 
-The cyclical nature of crime volumes in DC throughout a 24 hour period are clearly indicated by the graphics above.
+The cyclical nature of crime volumes in DC throughout a 24 hour period are clearly indicated with early morning hours seeing minimal crime instances vs. afternoon and evening hours. 
 
 ### Geographic Analysis
 
-This section focused on visualizing crime incidents based upon geographic location. We start with a heatmap showcasing the areas within the city where crime most frequent: 
+This section focused on visualizing crime incidents based upon geographic location. To begin, we visualize the concentrations of crime incidents throughout the city for the one year of July '18 - '19:
 
-<img src="images/DC_crime_heatmap.png" width="600" height="500">
-
+<p align="center">
+     <img src="images/DC_crime_heatmap.png" width="700" height="550">
+</p>
+     
 Further, we visualized crime on a 12 month animation beginning with August 2018:
 
 *insert dc crime gif*
 
 **Crime by Ward**
 
-Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC ward is provided as a reference: 
+Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below as a reference: 
 
 <img src="images/DC_ward_map.png" width="500" height="500">
 
