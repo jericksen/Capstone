@@ -17,6 +17,7 @@ The intent for this project is two-fold:
      - Sex Abuse
      - Theft From Automobiles
      - Theft (Other)
+
 The modeling portion will focus on identifying the best algorithm to classify the type of crime that took place. The problem we're trying to solve is whether or not a model can predict the type of crime with a reasonable accuracy score with the data provided by the DC police department. The implications of a successful model could feasibly assist the police department with allocating the appropriate resources as soon as as soon as a crime is to occur to reduce the
 
 For both parts, we'll walk through the methods used for obtaining, cleaning, analyzing, conditioning, feature engineering, and modeling the data.
@@ -50,7 +51,7 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-   - <img src="images/Percent_null_values.png" width="200" height="300">
+   - <img src="images/Percent_null_values.png" width="200" height="250">
 ***
 ***
 ## Exploratory Data Analysis
@@ -60,7 +61,7 @@ The exploratory phase focused on two key themes: DC crime by geographical locati
 ### Total Crime by Offense
 To start, we offer a visualization that accounts for total crime by type: 
 
-<img src="images/Total_crime_by_offense.png" width="500" height="800">
+<img src="images/Total_crime_by_offense.png" width="800" height="500">
 
 ### Month, Weekday, Hour Analysis
 In this section, we extract total crime volumes by the month, weekday, and hour to assess any patterns based of time dimensions:
@@ -69,7 +70,7 @@ In this section, we extract total crime volumes by the month, weekday, and hour 
 
 Here, we visualize total crime incidents in DC by month to extract any seasonality among crime volumes: 
 
-<img src="images/Total_crime_by_month.png" width="500" height="800">
+<img src="images/Total_crime_by_month.png" width="800" height="500">
 
 Based on the analysis, there is fairly significant seasonality with respect to total crime in DC. The delta between the months of August (peak) and February (bottom) of ~31%. A portion of this spread can be explained by the number of days in each month, however, accounting for that effect still produces a significant delta. 
 
@@ -95,7 +96,7 @@ The cyclical nature of crime volumes in DC throughout a 24 hour period are clear
 
 This section focused on visualizing crime incidents based upon geographic location. We start with a heatmap showcasing the areas within the city where crime most frequent: 
 
-<img src="images/DC_crime_heatmap.png" width="800" height="500">
+<img src="images/DC_crime_heatmap.png" width="600" height="600">
 
 Further, we visualized crime on a 12 month animation beginning with August 2018:
 
