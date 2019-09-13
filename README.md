@@ -134,12 +134,16 @@ Our next two graphics parse the total volume of crime by hour. The goal is to hi
 
 The cyclical nature of crime incidents in DC throughout a 24 hour period are clearly indicated above with the early morning hours seeing minimal crime activity vs. the afternoon and evening hours. 
 
-### Geographic Analysis
+## Geographic Analysis
 
 This section focused on visualizing crime incidents based upon geographic location. To begin, we visualize the concentrations of crime incidents throughout the city for the one year of July '18 - '19:
 
 <p align="center">
-     <img src="images/DC_crime_heatmap.png" width="700" height="550">
+     <img src="images/Crime_gif.gif" width="500" height="500">
+</p>
+
+<p align="center">
+     <img src="images/Total_crime_by_weekday.png" width="800" height="500">
 </p>
 
 **Crime by Ward**
@@ -164,10 +168,10 @@ We visualized each cime incident :
 
 **Crime With A Deadly Weapon**
 
-Finally, we took a look at the gegraphical distribution of crime instances with a deadly weapon, i.e., knife or gun, and see that gun violence is largely concentrated in the northeast and southeast quadrants:
+Finally, we took a look at the gegraphical distribution of crime instances with a deadly weapon, i.e., knife or gun, and see that gun violence is largely concentrated east and southeast of the 16th st. corridor:
 
 <p align="center">
-     <img src="images/Crime_w_deadly_weapon.png" width="800" height="600">
+     <img src="images/Crime_w_deadly_weapon.png" width="500" height="500">
 </p>
 
 ***
