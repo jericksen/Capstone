@@ -5,11 +5,11 @@
 </p>
 
 ### Project Overview
-The intent for this project is two-fold: 
+The intent for this project was two-fold: 
 
-- **Part One** - Involves exploratory data analysis of crime incidents throughout Washington, DC from July 2018 - 2019. The analysis will involve mappings of crime incidents within the city, crime volumes by certain time and day parameters, as well as crime incidents by geographical dimensions, i.e., DC Wards. 
+**Part One** - Involved exploratory data analysis of crime incidents throughout Washington, DC from July 2018 - 2019. The analysis will involve mappings of crime incidents within the city, crime volumes by certain time and day parameters, as well as crime incidents by geographical dimensions, i.e., DC Wards. 
 
-- **Part Two** - Involves the classifying the type of crime that takes place given a number of feature variables. The DC Police Department recognizes instances of crime as one of the following classes:
+**Part Two** - Involves an attempt to classify the **type** of crime to have taken place given a number of feature variables. The DC Police Department recognizes the differing types crime to belong to one of the following classes:
      - Arson
      - Assault with A Dangerous Weapon
      - Burglary
@@ -20,9 +20,9 @@ The intent for this project is two-fold:
      - Theft From Automobiles
      - Theft (Other)
 
-The modeling portion will focus on identifying the best algorithm to classify the type of crime that took place. The problem we're trying to solve is whether or not a model can predict the type of crime with a reasonable accuracy score with the data provided by the DC police department. The implications of a successful model could feasibly assist the police department with allocating the appropriate resources as soon as as soon as a crime is to occur to reduce the
+The modeling portion will focus on identifying the best algorithm to classify the type of crime that took place. The problem we're trying to solve is whether or not a model can predict the type of crime with a reasonable degree of accuracy using the data from the DC Police Department. The implications of a successful model could feasibly assist the police department with allocating the appropriate resources as soon as as soon as a crime was to occur in an effort to mobilize the appropriate resources ahead of time in an attempt to detain the perpetrator.
 
-For both parts, we'll walk through the methods used for obtaining, cleaning, analyzing, conditioning, feature engineering, and modeling the data.
+For both parts, we'll walk through the highlights as well as the methods used for obtaining, cleaning, analyzing, conditioning, feature engineering, and modeling the data.
 
 ***
 
