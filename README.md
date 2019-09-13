@@ -51,7 +51,9 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-   - <img src="images/Percent_null_values.png" width="200" height="250">
+
+<img src="images/Percent_null_values.png" width="200" height="250">
+
 ***
 ***
 ## Exploratory Data Analysis
@@ -59,11 +61,13 @@ The image below highlights the features contained within the crime datasets:
 The exploratory phase focused on two key themes: DC crime by geographical location, and crime by date and time parameters. Additionally, we took a look at the overall breakdown of total crimes committed by crime type. 
 
 ### Total Crime by Offense
+
 To start, we offer a visualization that accounts for total crime by type: 
 
 <img src="images/Total_crime_by_offense.png" width="800" height="500">
 
 ### Month, Weekday, Hour Analysis
+
 In this section, we extract total crime volumes by the month, weekday, and hour to assess any patterns based of time dimensions:
 
 **Total Crime Incidents by Month**
@@ -135,21 +139,21 @@ Feature engineering was required to further prepare the data for modeling. The s
 
 - The 'DATE' and 'TIME' features were split into their component parts - see below:
                          
-                         <img src="images/Date_time_unsplit.png" width="175" height="125">
+     <img src="images/Date_time_unsplit.png" width="175" height="125">
                          
-                         <img src="images/Date_time_split.png" width="300" height="150">
+     <img src="images/Date_time_split.png" width="300" height="150">
     
 - Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
 
-<img src="images/Feature_dummification.png" width="500" height="150">
+     <img src="images/Feature_dummification.png" width="500" height="150">
     
 - Data rebalancing via the SKlearn method SMOTE was necessary due to class imabalance:
 
-<img src="images/Label_imbalance.png" width="600" height="500">
+     <img src="images/Label_imbalance.png" width="600" height="500">
     
 - Rescaling the feature variables was the final engineering step. Doing so ensures no single feature has an outsized impact on model performances:
 
-<img src="images/Scaled_data.png" width="800" height="150">
+     <img src="images/Scaled_data.png" width="800" height="150">
 
 ### Model Selection
 
