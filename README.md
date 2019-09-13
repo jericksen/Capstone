@@ -140,10 +140,9 @@ Feature engineering was required to further prepare the data for modeling. The s
 
 - The 'DATE' and 'TIME' features were split into their component parts - see below:
                          
-     <img src="images/Date_time_unsplit.png" width="175" height="125">
+<img src="images/Date_time_unsplit.png" width="175" height="125">
                          
-     
-     <img src="images/Date_time_split.png" width="300" height="150">
+<img src="images/Date_time_split.png" width="300" height="150">
     
 - Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
 
