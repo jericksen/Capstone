@@ -101,7 +101,7 @@ The cyclical nature of crime volumes in DC throughout a 24 hour period are clear
 
 This section focused on visualizing crime incidents based upon geographic location. We start with a heatmap showcasing the areas within the city where crime most frequent: 
 
-     <img src="images/DC_crime_heatmap.png" width="600" height="500">
+<img src="images/DC_crime_heatmap.png" width="600" height="500">
 
 Further, we visualized crime on a 12 month animation beginning with August 2018:
 
@@ -115,7 +115,7 @@ Further analysis was done to compare and contrast crime volumes by DC wards. A m
 
 We visualized all incidents of crime separated by crime to further conceptualize the distribution of wards in DC:
 
-     <img src="images/DC_crime_by_ward_map.png" width="600" height="600">
+<img src="images/DC_crime_by_ward_map.png" width="600" height="600">
 
 **Crime by Type**
 
