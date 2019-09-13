@@ -25,7 +25,6 @@ The modeling portion will focus on identifying the best algorithm to classify th
 For both parts, we'll walk through the methods used for obtaining, cleaning, analyzing, conditioning, feature engineering, and modeling the data.
 
 ***
-***
 
 ## Obtaining the Data
 
@@ -33,7 +32,6 @@ The crime data for this project was obtained through the Open Data DC platform m
 
 Crime data was extracted for both 2018 and 2019. Both raw datasets can be found in the project repository titled: 'Crime_Incidents_in_2018.csv' & 'Crime_Incidents_in_2019.csv'.
 
-***
 ***
 
 ## Data Cleaning
@@ -62,7 +60,6 @@ The image below highlights the features contained within the crime datasets:
      <img src="images/Percent_null_values.png" width="200" height="250">
 </p>
 
-***
 ***
 
 ## Exploratory Data Analysis
@@ -143,7 +140,6 @@ We visualized all incidents of crime separated by crime to further conceptualize
      <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
 </p>
 
-***
 ***
 
 ## Modeling
@@ -243,7 +239,6 @@ Further, we assessed the which dimensions within our dataset contribute the most
      <img src="images/Final_feature_importance.png" width="700" height="500">
 </p>
 
-***
 ***
 
 ## Conclusion
