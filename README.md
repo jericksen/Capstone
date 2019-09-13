@@ -73,7 +73,8 @@ The following features were split into their component parts for visualizatio pu
 
 The following features were added for visualization purposes:
 
-    - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
+- 'COUNT' (for summing crime events) 
+- 'CITY' (for mapping purposes)
 
 **Null Values Removed:** 
 
