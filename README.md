@@ -1,6 +1,8 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
-<img src="images/DC.png" width="850" height="400">
+<p align="center">
+     <img src="images/DC.png" width="800" height="350">
+</p>
 
 ### Project Overview
 The intent for this project is two-fold: 
@@ -24,6 +26,7 @@ For both parts, we'll walk through the methods used for obtaining, cleaning, ana
 
 ***
 ***
+
 ## Obtaining the Data
 
 The crime data for this project was obtained through the Open Data DC platform maintained by the DC government: https://opendata.dc.gov. The particular dataset used is available for download via the following URL: https://opendata.dc.gov/datasets/crime-incidents-in-2019. 
@@ -32,6 +35,7 @@ Crime data was extracted for both 2018 and 2019. Both raw datasets can be found 
 
 ***
 ***
+
 ## Data Cleaning
 *The data cleaning steps are outlined in the accompanying jupyter notebook titled 'Capstone_EDA'.*
 
@@ -39,7 +43,9 @@ The data cleaning process was fairly straight forward as the datasets themselves
 
 The image below highlights the features contained within the crime datasets:
 
-<img src="images/Features.png" width="850" height="250">
+<p align="center">
+     <img src="images/Features.png" width="750" height="200">
+</p>
 
 **Data Cleaning Highlights:**
 
@@ -68,7 +74,7 @@ The exploratory phase focused on two key themes: DC crime by geographical locati
 To start, we offer a graphic that highlights the total crime committed in DC from July '18 - '19. The graphic breaks down the crime counts by the type of crime committed:  
 
 <p align="center">
-     <img src="images/Total_crime_by_offense.png" width="800" height="500">
+     <img src="images/Total_crime_by_offense.png" width="750" height="500">
 </p>
 
 ### Month, Weekday, Hour Analysis
@@ -89,7 +95,9 @@ Note: A portion of the variation between months can be explained by the total nu
 
 We visualized the total crime incidents by weekday to extract the effect, if any, of the weekday on the propensity for a crime to occur:
 
-<img src="images/Total_crime_by_weekday.png" width="850" height="500">
+<p align="center">
+     <img src="images/Total_crime_by_weekday.png" width="800" height="500">
+</p>
 
 From the analysis, it appears crime volumes do not vary by weekday in a significant way. A crime seems just as likely to occur on a particular weekday vs. any other day of the week. 
 
@@ -120,7 +128,7 @@ Further, we visualized crime on a 12 month animation beginning with August 2018:
 Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below as a reference: 
 
 <p align="center">
-     <img src="images/DC_ward_map.png" width="500" height="500">
+     <img src="images/DC_ward_map.png" width="450" height="450">
 </p>
 
 We took a at the crime volume by DC ward along with the crime rate per ward compared to the average crime rate: 
@@ -137,6 +145,7 @@ We visualized all incidents of crime separated by crime to further conceptualize
 
 ***
 ***
+
 ## Modeling
 
 The modeling portion of the project includes a number of extra steps taken to further prepare the data running through our the algorithms. The highlights are included in the sections below. Following the data processing, we'll outline the results of our final model. 
@@ -233,4 +242,10 @@ Further, we assessed the which dimensions within our dataset contribute the most
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
 </p>
+
+***
+***
+
+## Conclusion
+
 
