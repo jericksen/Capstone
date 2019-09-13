@@ -139,11 +139,11 @@ The cyclical nature of crime incidents in DC throughout a 24 hour period are cle
 This section focused on visualizing crime incidents based upon geographic location. To begin, we visualize the concentrations of crime incidents throughout the city for the one year of July '18 - '19:
 
 <p align="center">
-     <img src="images/DC_crime_heatmap.png" width="500" height="500">
+     <img src="images/DC_crime_heatmap.png" width="575" height="500">
 </p>
 
 <p align="center">
-     <img src="images/Crime_gif.gif" width="500" height="500">
+     <img src="images/Crime_gif.gif" width="575" height="500">
 </p>
 
 **Crime by Ward**
@@ -171,18 +171,18 @@ We visualized each cime incident :
 Finally, we took a look at the gegraphical distribution of crime instances with a deadly weapon, i.e., knife or gun, and see that gun violence is largely concentrated east and southeast of the 16th st. corridor:
 
 <p align="center">
-     <img src="images/Crime_w_deadly_weapon.png" width="500" height="500">
+     <img src="images/Crime_w_deadly_weapon.png" width="575" height="500">
 </p>
 
 ***
 
 ## Modeling
 
-The modeling portion of the project includes a number of extra steps taken to further prepare the data running through our the algorithms. The highlights are included in the sections below. Following the data processing, we'll outline the results of our final model. 
+The modeling portion of this project included a number of steps taken to further prepare the data for modeling The highlights of these steps are included in the sections below. Following the additional data processing, we'll outline the results of our final model. 
 
 ### Conditioning
 
-Further steps were necessary to condition the data for modeling. The key steps are included: 
+The additional steps for conditioning the data included the following: 
 
 - Split the features 'NEIGHBORHOOD_CLUSTER' and 'VOTING_PRECINCT' from their string counterparts within each instance. Once complete, we removed the string components leaving just the numeric values for the features. The below image highlights the features addressed in this step: 
 
@@ -195,9 +195,9 @@ Further steps were necessary to condition the data for modeling. The key steps a
 
 ### Feature Engineering
 
-Feature engineering was required to further prepare the data for modeling. The steps are included below: 
+The additional steps for engineering our features included the following: 
 
-- The 'DATE' and 'TIME' features were split into their component parts - see below:
+- The 'DATE' and 'TIME' features were split into their component parts as seen below:
 
 <p align="center">
      <img src="images/Date_time_unsplit.png" width="175" height="125">
@@ -213,7 +213,7 @@ Feature engineering was required to further prepare the data for modeling. The s
      <img src="images/Feature_dummification.png" width="500" height="150">
 </p>
     
-- Data rebalancing via the SKlearn method SMOTE was necessary due to class imabalance:
+- Data rebalancing via the SMOTE method was necessary due to class imabalances as seen below:
 
 <p align="center">
      <img src="images/Label_imbalance.png" width="600" height="500">
@@ -239,7 +239,7 @@ We began the modeling portion by instantiating the following classifiers for sid
 - Random Forests
 - Ada Boost
 
-The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
+The models were run using a training set containing ~167k instances from our rebalanced data. The dataset was split 20 times using Kfold and assessed against the training labels using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances' cross validation scores. Below we include the results of our intial model comparisons: 
 
 <p align="center">
      <img src="images/Model_cv_scores.png" width="500" height="450">
@@ -247,9 +247,7 @@ The models were run using a training set containing ~167k instances from our reb
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
-The next step was to improve the existing Random Forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance to ~86%.
-
-The next step was to improve the existing Random Forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance to ~86%.
+The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance of ~86%.
 
 As a final measure before running our final model, I decided to remove the 'SECOND' and 'MINUTE' features as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions. 
 
@@ -259,7 +257,7 @@ With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 
 
 **Confusion Matrix**
 
-We assessed the confusion matrix to visualize the model's misclassification:
+I assessed the confusion matrix to visualize the model's misclassification and overall performance:
 
 <p align="center">
      <img src="images/Final_confusion_matrix.png" width="600" height="500">
@@ -267,7 +265,7 @@ We assessed the confusion matrix to visualize the model's misclassification:
 
 **Feature Importance**
 
-Further, we assessed the which dimensions within our dataset contribute the most predictive information for classifying crime incidents: 
+And finally, I visualized the features which contributed the most predictive information when classifying crime incidents using our randdom forest model: 
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
@@ -276,5 +274,20 @@ Further, we assessed the which dimensions within our dataset contribute the most
 ***
 
 ## Conclusion
+
+This project includes more than was highlighted in the README above. The additional contents can be found in the accompanying jupyter notebooks contained within the project repository. However, we've captured the project highlights above and offer the following concluding remarks: 
+
+The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavoir within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
+
+The modeling portion, and it's implications, require further investigation and work to improve to overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve it's performance. 
+
+Going forward, the DC Police Dapartment should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, day, month, et cetera, we may be able to predict the type of crime intstantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
+
+**Further Work**
+
+Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work to achieve a better performance: 
+
+- Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic information, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
+- 
 
 
