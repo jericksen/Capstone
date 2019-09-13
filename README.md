@@ -119,9 +119,7 @@ We took a at the crime volume by DC ward along with the crime rate per ward comp
 
 We visualized all incidents of crime separated by crime to further conceptualize the distribution of wards in DC:
 
-<img src="images/DC_crime_by_ward_map.png" width="600" height="600">
-
-**Crime by Type**
+<img src="images/DC_crime_by_ward_map.png" width="800" height="600">
 
 ***
 ***
