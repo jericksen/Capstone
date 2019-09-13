@@ -134,10 +134,10 @@ Further steps were necessary to condition the data for modeling. The key steps a
 Feature engineering was required to further prepare the data for modeling. The steps are included below: 
 
 - The 'DATE' and 'TIME' features were split into their component parts - see below:
-    - <img src="images/Date_time_unsplit.png" width="300" height="200">
-    - <img src="images/Date_time_split.png" width="300" height="200">
+    - <img src="images/Date_time_unsplit.png" width="300" height="150">
+    - <img src="images/Date_time_split.png" width="300" height="150">
 - Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
-    - <img src="images/Feature_dummification.png" width="500" height="200">
+    - <img src="images/Feature_dummification.png" width="500" height="150">
 - Data rebalancing via the SKlearn method SMOTE was necessary due to class imabalance:
     - <img src="images/Label_imbalance.png" width="600" height="500">
 - Rescaling the feature variables was the final engineering step. Doing so ensures no single feature has an outsized impact on model performances:
@@ -159,7 +159,7 @@ We began the modeling portion by instantiating the following classifiers for sid
 
 The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
 
-<img src="images/Model_cv_scores.png" width="400" height="500">
+<img src="images/Model_cv_scores.png" width="500" height="400">
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
@@ -174,11 +174,13 @@ As a final measure before running our final model, I decided to remove the 'SECO
 With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our final model was run producing an accuracy score of ~85%. 
 
 **Confusion Matrix**
+
 We assessed the confusion matrix to visualize the model's misclassification:
 
-<img src="images/Final_confusion_matrix.png" width="600" height="600">
+<img src="images/Final_confusion_matrix.png" width="600" height="500">
 
 **Feature Importance**
+
 Further, we assessed the which dimensions within our dataset contribute the most predictive information for classifying crime incidents: 
 
 <img src="images/Final_feature_importance.png" width="700" height="500">
