@@ -134,8 +134,8 @@ Further steps were necessary to condition the data for modeling. The key steps a
 Feature engineering was required to further prepare the data for modeling. The steps are included below: 
 
 - The 'DATE' and 'TIME' features were split into their component parts - see below:
-<img src="images/Date_time_unsplit.png" width="175" height="125">
-<img src="images/Date_time_split.png" width="300" height="150">
+                         <img src="images/Date_time_unsplit.png" width="175" height="125">
+                         <img src="images/Date_time_split.png" width="300" height="150">
     
 - Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
 <img src="images/Feature_dummification.png" width="500" height="150">
