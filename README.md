@@ -1,7 +1,7 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
 <p align="center">
-     <img src="images/DC.png" width="800" height="350">
+     <img src="images/DC.png" width="850" height="350">
 </p>
 
 ### Project Overview
