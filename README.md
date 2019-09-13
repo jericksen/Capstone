@@ -134,16 +134,16 @@ Our next two graphics parse the total volume of crime by hour. The goal is to hi
 
 The cyclical nature of crime incidents in DC throughout a 24 hour period are clearly indicated above with the early morning hours seeing minimal crime activity vs. the afternoon and evening hours. 
 
-## Geographic Analysis
+### Geographic Analysis
 
 This section focused on visualizing crime incidents based upon geographic location. To begin, we visualize the concentrations of crime incidents throughout the city for the one year of July '18 - '19:
 
 <p align="center">
-     <img src="images/Crime_gif.gif" width="500" height="500">
+     <img src="images/DC_crime_heatmap.png" width="500" height="500">
 </p>
 
 <p align="center">
-     <img src="images/Total_crime_by_weekday.png" width="800" height="500">
+     <img src="images/Crime_gif.gif" width="500" height="500">
 </p>
 
 **Crime by Ward**
