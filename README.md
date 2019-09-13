@@ -102,27 +102,27 @@ To start, we offer a graphic that highlights the total crime committed in DC fro
 
 ### Month, Weekday, Hour Analysis
 
-In this section, we extract total crime volumes by the month, weekday, and hour to assess any cyclical patterns based on time & day dimensions:
+For this section, we illistrate total crime volumes by the month, weekday, and hour to assess any cyclical patterns based on time & day dimensions.
 
 **Total Crime Incidents by Month**
 
-Here, we illustrate total crime incidents by month to extract any seasonality among crime volumes: 
+Here, we extracted total crime incidents by month to highlight any seasonality among total crime volumes: 
 
 <img src="images/Total_crime_by_month.png" width="850" height="500">
 
-Based on the data, there appears a fairly significant seasonal effect with respect to total crime in DC. The delta between the months of August (peak) and February (bottom) represents a ~31% drop in total crimes committed. 
+From the data there appears to be a fairly significant seasonal effect with respect to total crime volumes in DC. The delta between the months of August (peak) and February (bottom) represents a ~31% drop in total crimes committed. 
 
-Note: A portion of the variation between months can be explained by the total number of days in each month, however, the effect of this is relatively insignificant and does not account for the large drop in total crime from August to February. A seasonal cycle likely explains the majority of the significant variation between August and February. 
+Note: A portion of the variation between months can be explained by the total number of days in each month, however, the effect of this is relatively insignificant and does not account for the large drop in total crime from August to February. A seasonal cycle likely explains the majority of the variation between August and February. 
 
 **Total Crime Incidents by Weekday**
 
-We visualized the total crime incidents by weekday to extract the effect, if any, of the weekday on the propensity for a crime to occur:
+We then took a look at total crime incidents by weekday extracting the effect, if any, of the weekday on total crime incidents:
 
 <p align="center">
      <img src="images/Total_crime_by_weekday.png" width="800" height="500">
 </p>
 
-From the analysis, it appears crime volumes do not vary by weekday in a significant way. A crime seems just as likely to occur on a particular weekday vs. any other day of the week. 
+From the analysis, its clear crime volumes do not vary by weekday in a significant way. A crime appears just as likely to occur a given weekday relative to the rest. 
 
 **Total Crime Incidents by Hour**
 
@@ -132,7 +132,7 @@ Our next two graphics parse the total volume of crime by hour. The goal is to hi
 
 <img src="images/Total_crime_by_hour_by_offense.png" width="850" height="500">
 
-The cyclical nature of crime volumes in DC throughout a 24 hour period are clearly indicated with early morning hours seeing minimal crime instances vs. afternoon and evening hours. 
+The cyclical nature of crime incidents in DC throughout a 24 hour period are clearly indicated above with the early morning hours seeing minimal crime activity vs. the afternoon and evening hours. 
 
 ### Geographic Analysis
 
@@ -141,29 +141,33 @@ This section focused on visualizing crime incidents based upon geographic locati
 <p align="center">
      <img src="images/DC_crime_heatmap.png" width="700" height="550">
 </p>
-     
-Further, we visualized crime on a 12 month animation beginning with August 2018:
-
-*insert dc crime gif*
 
 **Crime by Ward**
 
-Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below as a reference: 
+Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below for easy reference: 
 
 <p align="center">
      <img src="images/DC_ward_map.png" width="450" height="450">
 </p>
 
-We took a at the crime volume by DC ward along with the crime rate per ward compared to the average crime rate: 
+Here we look at crime volumes and crime rates by ward:
 
 <p align="center">
      <img src="images/DC_crime_by_ward.png" width="800" height="500">
 </p>
 
-We visualized all incidents of crime separated by crime to further conceptualize the distribution of wards in DC:
+We visualized each cime incident :
 
 <p align="center">
      <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
+</p>
+
+**Crime With A Deadly Weapon**
+
+Finally, we took a look at the gegraphical distribution of crime instances with a deadly weapon, i.e., knife or gun, and see that gun violence is largely concentrated in the northeast and southeast quadrants:
+
+<p align="center">
+     <img src="images/Crime_w_deadly_weapon.png" width="800" height="600">
 </p>
 
 ***
