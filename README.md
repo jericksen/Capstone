@@ -111,6 +111,10 @@ Further, we visualized crime on a 12 month animation beginning with August 2018:
 
 Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC ward is provided as a reference: 
 
+<img src="images/DC_ward_map.png" width="500" height="500">
+
+We took a at the crime volume by DC ward along with the crime rate per ward compared to the average crime rate: 
+
 <img src="images/DC_crime_by_ward.png" width="800" height="500">
 
 We visualized all incidents of crime separated by crime to further conceptualize the distribution of wards in DC:
@@ -172,7 +176,7 @@ We began the modeling portion by instantiating the following classifiers for sid
 
 The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
 
-<img src="images/Model_cv_scores.png" width="500" height="450">
+     <img src="images/Model_cv_scores.png" width="500" height="450">
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
@@ -197,6 +201,4 @@ We assessed the confusion matrix to visualize the model's misclassification:
 Further, we assessed the which dimensions within our dataset contribute the most predictive information for classifying crime incidents: 
 
 <img src="images/Final_feature_importance.png" width="700" height="500">
-
-
 
