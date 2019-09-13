@@ -51,4 +51,5 @@ The image below highlights the features contained within the crime datasets:
     - 'COUNT' (for summing crime events), 'CITY' (for mapping purposes)
 - Null Values Removed: 
     - The remaining dataset contained null values within some of the feature variables. The percentage of null values compared to the total dataset length was assessed and deemed insignificant enough to to remove these rows altogether: 
-                  <img src="images/Percent_null_values.png" width="200" height="300">
+                  
+                       <img src="images/Percent_null_values.png" width="200" height="300">
