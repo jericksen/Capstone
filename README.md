@@ -162,7 +162,7 @@ We began the modeling portion by instantiating the following classifiers for sid
 
 The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
 
-<img src="images/Model_cv_scores.png" width="500" height="400">
+<img src="images/Model_cv_scores.png" width="500" height="450">
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
