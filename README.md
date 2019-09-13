@@ -114,5 +114,72 @@ We visualized all incidents of crime separated by crime to further conceptualize
 
 **Crime by Type**
 
+***
+***
+## Modeling
 
+The modeling portion of the project includes a number of extra steps taken to further prepare the data running through our the algorithms. The highlights are included in the sections below. Following the data processing, we'll outline the results of our final model. 
+
+### Conditioning
+
+Further steps were necessary to condition the data for modeling. The key steps are included: 
+
+- Split the features 'NEIGHBORHOOD_CLUSTER' and 'VOTING_PRECINCT' from their string counterparts within each instance. Once complete, we removed the string components leaving just the numeric values for the features. The below image highlights the features addressed in this step: 
+    - <img src="images/Features_for_splitting.png" width="300" height="200">
+- Removed empty spaces from the 'BLOCK_GROUP' feature. 
+- Converted all features assigned the wrong data type to integer or float data types. 
+
+### Feature Engineering
+
+Feature engineering was required to further prepare the data for modeling. The steps are included below: 
+
+- The 'DATE' and 'TIME' features were split into their component parts - see below:
+    - <img src="images/Date_time_unsplit.png" width="300" height="200">
+    - <img src="images/Date_time_split.png" width="300" height="200">
+- Features 'SHIFT' and 'METHOD' were categorical variables which required dummification via one-hot-encoding:
+    - <img src="images/Feature_dummification.png" width="500" height="200">
+- Data rebalancing via the SKlearn method SMOTE was necessary due to class imabalance:
+    - <img src="images/Label_imbalance.png" width="600" height="500">
+- Rescaling the feature variables was the final engineering step. Doing so ensures no single feature has an outsized impact on model performances:
+    - <img src="images/Scaled_data.png" width="800" height="200">
+
+### Model Selection
+
+With our data conditioned, features engineered for modeling and our class labels encoded, the data was ready for modeling. 
+
+**Model Comparison**
+
+We began the modeling portion by instantiating the following classifiers for side by side performance evaluation using each model's default hyperparameters: 
+
+- K Nearest Neighbors
+- Decision Trees
+- Naive Bayes
+- Random Forests
+- Ada Boost
+
+The models were run using a training set containing ~167k instances from our rebalanced dataset. The dataset was split 20 times using Kfold and assessed against the labels set using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances cv scores. Below we include the output for this model comparison: 
+
+<img src="images/Model_cv_scores.png" width="400" height="500">
+
+With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
+
+The next step was to improve the existing Random Forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance to ~86%.
+
+The next step was to improve the existing Random Forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance to ~86%.
+
+As a final measure before running our final model, I decided to remove the 'SECOND' and 'MINUTE' features as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions. 
+
+### Final Model Evaluation
+
+With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our final model was run producing an accuracy score of ~85%. 
+
+**Confusion Matrix**
+We assessed the confusion matrix to visualize the model's misclassification:
+
+<img src="images/Final_confusion_matrix.png" width="600" height="600">
+
+**Feature Importance**
+Further, we assessed the which dimensions within our dataset contribute the most predictive information for classifying crime incidents: 
+
+<img src="images/Final_feature_importance.png" width="700" height="500">
 
