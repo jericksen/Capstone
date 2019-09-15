@@ -142,6 +142,8 @@ This section focused on visualizing crime incidents based upon geographic locati
      <img src="images/DC_crime_heatmap.png" width="575" height="500">
 </p>
 
+Further, we produced a graphic that parses out the geographical distribution of crime incidents per month. An interesting animation below samples the changes in crime concentrations per month:
+
 <p align="center">
      <img src="images/Crime_gif.gif" width="575" height="500">
 </p>
