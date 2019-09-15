@@ -289,6 +289,6 @@ Though our model returned an ~85% accuracy score, more work is needed to improve
 
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from muliple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
-- ***
+- ***Additional Classifiers***: Although we employed 5 algorithms adept at classification prblems, more classifiers exist. I'd reccomend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data. 
 
 
