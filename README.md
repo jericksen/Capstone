@@ -1,7 +1,7 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
 <p align="center">
-     <img src="images/DC.png" width="850" height="350">
+     <img src="images/DC.png" width="800" height="350">
 </p>
 
 ### Project Overview
@@ -279,13 +279,13 @@ This project includes more than was highlighted in the README above. The additio
 
 The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavoir within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
 
-The modeling portion, and it's implications, require further investigation and work to improve to overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve it's performance. 
+The modeling portion, and it's implications, require further investigation and work improve to overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve it's performance. 
 
-Going forward, the DC Police Dapartment should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, day, month, et cetera, we may be able to predict the type of crime intstantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
+Going forward, the DC Police Dapartment should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime intstantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
 
 **Further Work**
 
-Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work to achieve a better performance: 
+Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work in an attempt to achieve a better model performance: 
 
 - Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic information, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - 
