@@ -160,7 +160,7 @@ Here we look at crime volumes and crime rates by ward:
      <img src="images/DC_crime_by_ward.png" width="800" height="500">
 </p>
 
-We visualized each cime incident :
+We visualized each crime incident :
 
 <p align="center">
      <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
@@ -287,7 +287,8 @@ Going forward, the DC Police Dapartment should consider replicating parts of thi
 
 Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work in an attempt to achieve a better model performance: 
 
-- Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic information, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
-- 
+- ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
+- ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from muliple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
+- ***
 
 
