@@ -4,7 +4,7 @@
      <img src="images/DC.png" width="800" height="350">
 </p>
 
-### Project Overview
+## Project Overview
 The intent for this project was two-fold: 
 
 **Part One** - Involved exploratory data analysis of crime incidents throughout Washington, DC from July 2018 - 2019. The analysis will involve mappings of crime incidents within the city, crime volumes by certain time and day parameters, as well as crime incidents by geographical dimensions, i.e., DC Wards. 
@@ -44,9 +44,9 @@ The image below highlights the features contained within these crime datasets:
      <img src="images/Features.png" width="750" height="200">
 </p>
 
-**Data Cleaning Highlights:**
+### Data Cleaning Highlights
 
-**Initial Features Removed:** 
+**Initial Features Removed** 
 
 The following features were removed due to their ambiguity, redundancy with other features, containing too many missing values, or irrelevance to the problem being solved:
 
@@ -62,21 +62,21 @@ The following features were removed due to their ambiguity, redundancy with othe
 - 'START_DATE'
 - 'END_DATE'
 
-**Features Split for Modeling Purposes:** 
+**Features Split for Modeling Purposes** 
 
-The following features were split into their component parts for visualizatio purposes, i.e., 'DATE' --> 'DAY, 'MONTH, 'YEAR'): 
+The following features were split into their component parts for visualization purposes, i.e., 'DATE' --> 'DAY, 'MONTH, 'YEAR'): 
 
 - 'DATE'
 - 'TIME'
 
-**Features Added:**
+**Features Added**
 
 The following features were added for visualization purposes:
 
 - 'COUNT' (for summing crime events) 
 - 'CITY' (for mapping purposes)
 
-**Null Values Removed:** 
+**Missing Values** 
 
 The remaining dataset contained missing values within some of the feature variables. The percentage of missing values within these features with respect to the total dataset was assessed and deemed insignificant enough to comfortably remove these rows altogether. 
 
@@ -119,7 +119,7 @@ Note: A portion of the variation between months can be explained by the total nu
 We then took a look at total crime incidents by weekday extracting the effect, if any, of the weekday on total crime incidents:
 
 <p align="center">
-     <img src="images/Total_crime_by_weekday.png" width="800" height="500">
+     <img src="images/Total_crime_by_weekday.png" width="700" height="450">
 </p>
 
 From the analysis, its clear crime volumes do not vary by weekday in a significant way. A crime appears just as likely to occur a given weekday relative to the rest. 
@@ -128,9 +128,9 @@ From the analysis, its clear crime volumes do not vary by weekday in a significa
 
 Our next two graphics parse the total volume of crime by hour. The goal is to highlight trends that exist in terms of crime volumes within a 24 hour cycle:
 
-<img src="images/Total_crime_by_hour.png" width="850" height="500">
+<img src="images/Total_crime_by_hour.png" width="850" height="450">
 
-<img src="images/Total_crime_by_hour_by_offense.png" width="850" height="500">
+<img src="images/Total_crime_by_hour_by_offense.png" width="850" height="450">
 
 The cyclical nature of crime incidents in DC throughout a 24 hour period are clearly indicated above with the early morning hours seeing minimal crime activity vs. the afternoon and evening hours. 
 
@@ -153,7 +153,7 @@ Further, we produced a graphic that parses out the geographical distribution of 
 Further analysis was done to compare and contrast crime volumes by DC wards. A map of the DC wards is provided below for easy reference: 
 
 <p align="center">
-     <img src="images/DC_ward_map.png" width="450" height="450">
+     <img src="images/DC_ward_map.png" width="350" height="350">
 </p>
 
 Here we look at crime volumes and crime rates by ward:
