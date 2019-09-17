@@ -168,12 +168,12 @@ We visualized each crime incident :
      <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
 </p>
 
-**Crime With A Deadly Weapon**
+**Crime by Geographic Location**
 
-Finally, we took a look at the gegraphical distribution of crime instances with a deadly weapon, i.e., knife or gun, and see that gun violence is largely concentrated east and southeast of the 16th st. corridor:
+Finally, we took a look at the exact gegraphical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
 
 <p align="center">
-     <img src="images/Crime_w_deadly_weapon.png" width="575" height="500">
+     <img src="images/Crime_geo_location.png" width="575" height="500">
 </p>
 
 ***
