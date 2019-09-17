@@ -173,7 +173,7 @@ We visualized each crime incident :
 Finally, we took a look at the exact gegraphical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
 
 <p align="center">
-     <img src="images/Crime_geo_location.png" width="575" height="500">
+     <img src="images/Crime_geo_location.png" width="800" height="600">
 </p>
 
 ***
