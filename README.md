@@ -102,7 +102,7 @@ To start, we offer a graphic that highlights the total crime committed in DC fro
 
 ### Month, Weekday, Hour Analysis
 
-For this section, we illistrate total crime volumes by the month, weekday, and hour to assess any cyclical patterns based on time & day dimensions.
+For this section, we illustrate total crime volumes by the month, weekday, and hour to assess any cyclical patterns based on time & day dimensions.
 
 **Total Crime Incidents by Month**
 
@@ -170,7 +170,7 @@ We visualized each crime incident :
 
 **Crime by Geographic Location**
 
-Finally, we took a look at the exact gegraphical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
+Finally, we took a look at the exact geographical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
 
 <p align="center">
      <img src="images/Crime_geo_location.png" width="800" height="600">
@@ -215,7 +215,7 @@ The additional steps for engineering our features included the following:
      <img src="images/Feature_dummification.png" width="500" height="150">
 </p>
     
-- Data rebalancing via the SMOTE method was necessary due to class imabalances as seen below:
+- Data rebalancing via the SMOTE method was necessary due to class imbalances as seen below:
 
 <p align="center">
      <img src="images/Label_imbalance.png" width="600" height="500">
@@ -249,7 +249,7 @@ The models were run using a training set containing ~167k instances from our reb
 
 With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
 
-The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an imporved accuracy performance of ~86%.
+The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an improved accuracy performance of ~85%.
 
 As a final measure before running our final model, I decided to remove the 'SECOND' and 'MINUTE' features as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions. 
 
@@ -267,7 +267,7 @@ I assessed the confusion matrix to visualize the model's misclassification and o
 
 **Feature Importance**
 
-And finally, I visualized the features which contributed the most predictive information when classifying crime incidents using our randdom forest model: 
+And finally, I visualized the features which contributed the most predictive information when classifying crime incidents using our random forest model: 
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
@@ -279,17 +279,17 @@ And finally, I visualized the features which contributed the most predictive inf
 
 This project includes more than was highlighted in the README above. The additional contents can be found in the accompanying jupyter notebooks contained within the project repository. However, we've captured the project highlights above and offer the following concluding remarks: 
 
-The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavoir within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
+The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavior within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
 
-The modeling portion, and it's implications, require further investigation and work improve to overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve it's performance. 
+The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve its performance. 
 
-Going forward, the DC Police Dapartment should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime intstantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
+Going forward, the DC Police Department should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime instantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
 
 **Further Work**
 
 Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work in an attempt to achieve a better model performance: 
 
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
-- ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from muliple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
-- ***Additional Classifiers***: Although we employed 5 algorithms adept at classification prblems, more classifiers exist. I'd reccomend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
+- ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from multiple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
+- ***Additional Classifiers***: Although we employed 5 algorithms adept at classification problems, more classifiers exist. I'd recommend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
 
