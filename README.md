@@ -24,6 +24,12 @@ The modeling portion will focus on identifying the best algorithm to classify th
 
 For both parts, we'll walk through the highlights as well as the methods used for obtaining, cleaning, analyzing, conditioning, feature engineering, and modeling the data.
 
+**Key Technologies & Python Libraries Used:**
+ - Folium (mapping)
+ - SKlearn
+ - Seaborn
+ - Tableau (interactive visualizations)
+
 ***
 
 ## Obtaining the Data
@@ -146,6 +152,12 @@ Further, we produced a graphic that parses out the geographical distribution of 
 
 <p align="center">
      <img src="images/Crime_gif.gif" width="575" height="500">
+</p>
+
+Finally, we built a series of heatmaps outlining the distribution of different crime types throughout DC: 
+
+<p align="center">
+     <img src="images/Crime_by_offense_ heatmaps" width="650" height="900">
 </p>
 
 **Crime by Ward**
