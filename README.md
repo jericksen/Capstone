@@ -29,6 +29,7 @@ For both parts, we'll walk through the highlights as well as the methods used fo
  - SKlearn
  - Seaborn
  - Tableau (interactive visualizations)
+     - Direct link to Tableau Public profile housing many of the Tableau graphics used throughout this project: https://public.tableau.com/profile/jonathan.ericksen5220#!/
 
 ***
 
@@ -187,6 +188,8 @@ Finally, we took a look at the exact geographical location of each crime that to
 <p align="center">
      <img src="images/Crime_geo_location.png" width="800" height="600">
 </p>
+
+Here's a direct link to interactive graphic via Tableau Public: https://public.tableau.com/profile/jonathan.ericksen5220#!/vizhome/IncidentMap_15686551429520/MapCrimebyOffense
 
 ***
 
