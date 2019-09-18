@@ -157,7 +157,7 @@ Further, we produced a graphic that parses out the geographical distribution of 
 Finally, we built a series of heatmaps outlining the distribution of different crime types throughout DC: 
 
 <p align="center">
-     <img src="images/Crime_by_offense_ heatmaps" width="650" height="900">
+     <img src="images/Crime_by_offense_ heatmaps.png" width="650" height="900">
 </p>
 
 **Crime by Ward**
