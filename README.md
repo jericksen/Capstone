@@ -268,9 +268,9 @@ The next step was to improve the existing random forest model by running SKlearn
 
 As a final measure before running our final model, I decided to remove the 'SECOND' and 'MINUTE' features as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions. 
 
-### Final Model Evaluation
+### Model Evaluation and Analysis
 
-With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our final model was run producing an accuracy score of ~85%. 
+With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our model was run once again producing accuracy score of ~85%. 
 
 **Confusion Matrix**
 
@@ -286,6 +286,29 @@ And finally, I visualized the features which contributed the most predictive inf
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
+</p>
+
+**Performance Analysis**
+
+The resulting confusion matrix from our final model indicates a high level of missclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
+
+Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
+
+<p align="center">
+     <img src="images/Hour_dist._7_8.png" width="700" height="500">
+</p>
+<p align="center">
+     <img src="images/Hour_dist._1_4.png" width="700" height="500">
+</p>
+
+The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
+
+I performed the same analysis with the 2nd and 3rd most important features and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4. 
+
+Based on the above analysis, and due to the similar nature of class 7 & 8 with respect to the type of crime, the decision was made to combine these classes into one and reassess the model's performance. Doing so increased the models accuracy score to ~89%. The resulting confusion matrix is provided below: 
+
+<p align="center">
+     <img src="images/Final_confusion_matrix_2.png" width="500" height="500">
 </p>
 
 ***
