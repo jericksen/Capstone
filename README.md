@@ -326,7 +326,7 @@ This project includes more than was highlighted in the README above. The additio
 
 The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavior within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
 
-The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~89% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve its performance. 
+The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model using the existing data producing a crime classification model yielding a ~89% accuracy score. The logical next step is to further iterate on the existing model hyperparameters and features in an attempt to further improve its performance. 
 
 Going forward, the DC Police Department should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime instantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
 
@@ -337,5 +337,5 @@ Though our model returned an ~89% accuracy score, more work is needed to improve
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from multiple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
 - ***Additional Classifiers***: Although we employed 5 algorithms adept at classification problems, more classifiers exist. I'd recommend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
-- ***Additional Model Assessment***: 
+- ***Additional Model Assessment***: Further work is needed to assess why missclassification is occuring between class 7 (minor theft) and classes 2, 4, and 5 (burglary, motorvehicle theft, and robbery, respectively). These crimes, given their close relationship with minor theft, likely contain features with high correlations causing our model to misclassify the crime type. More investigation is needed to extract and control for these similarities as was done between the two minor theft classes. 
 
