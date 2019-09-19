@@ -267,37 +267,37 @@ The models were run using a training set containing ~167k instances from our reb
      <img src="images/Model_cv_scores.png" width="500" height="450">
 </p>
 
-With the resulting model performances above, I chose to proceed using the Random Forest classifier as it's average accuracy performance was the highest as ~82%. 
+With the resulting model performances above, I chose to proceed using the random forest classifier as it's average accuracy performance was the highest at ~82%. 
 
-The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters which resulted in an improved accuracy performance of ~85%.
+The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters resulting in an improved accuracy score of ~85%. 
 
-As a final measure before running our final model, I decided to remove the 'SECOND' and 'MINUTE' features as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions. 
+**Feature Reduction:**
 
-### Model Evaluation and Analysis
+After a final review of the contributing feature variables, I decided to remove the 'SECOND' and 'MINUTE' dimensions as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions.
 
-With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our model was run once again yielding an accuracy score of ~85%. 
-
-**Confusion Matrix**
-
-I assessed the confusion matrix to visualize the model's misclassification and overall performance:
-
-<p align="center">
-     <img src="images/Final_confusion_matrix.png" width="600" height="500">
-</p>
+### Model Evaluation, Analysis & Improvements
 
 **Feature Importance**
 
-Additionally, I visualized the features importances which ranks the dataset dimensions carrying the most and least predictive information for classifying crime incidents: 
+With the latest model run, I chose to visualize the features importances ranking the dimensions which carry the most and least predictive signal:
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
 </p>
 
-**Performance Analysis**
+**Confusion Matrix**
 
-The resulting confusion matrix from our final model indicates a high level of missclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
+I then assessed the confusion matrix to visualize the model's misclassification and overall performance. The image below depicts a high level of missclassification between classes 7 & 8 which will be the subject of further investigation below:
 
-Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
+<p align="center">
+     <img src="images/Final_confusion_matrix.png" width="600" height="500">
+</p>
+
+**Performance Analysis & Investigation**
+
+The resulting confusion matrix indicates a high level of missclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
+
+Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the data leading to the model's inability to differentiate between the classes. To begin this analysis, I looked at the distribution of the 'hour' feature for class 7 & 8 and compared it the distribution of a few other, unrelated crime classes. 
 
 <p align="center">
      <img src="images/Hour_dist._7_8.png" width="650" height="350">
@@ -306,13 +306,13 @@ Attempts were made to look at the underlying data from the top three contributin
      <img src="images/Hour_dist._1_4.png" width="650" height="350">
 </p>
 
-The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
+The distributions for classes 7 & 8 showed significant similarities compared to classes 1 & 4. This offers clear indications that the hour feature is difficult to differentiate by the random forest model which has led to higher levels of missclassification.
 
-I performed the same analysis with the 2nd and 3rd most important features and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4. 
+I performed the same analysis with the 2nd and 3rd most important (latitude and longitude) features and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4. 
 
 **Final Model**
 
-Based on the above analysis, and due to the similar nature of class 7 & 8 with respect to the type of crime, the decision was made to combine these classes into one and reassess the model's performance. Doing so increased the models accuracy score to ~89%. The resulting confusion matrix is provided below: 
+Based on the above analysis, and due to the similar nature of class 7 & 8 with respect to the type of crime, the decision was made to combine these classes into one and reassess the model's performance. Doing so increased the models accuracy score to **~89%**. The resulting confusion matrix is provided below:
 
 <p align="center">
      <img src="images/Final_confusion_matrix_2.png" width="600" height="500">
@@ -337,5 +337,5 @@ Though our model returned an ~89% accuracy score, more work is needed to improve
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from multiple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
 - ***Additional Classifiers***: Although we employed 5 algorithms adept at classification problems, more classifiers exist. I'd recommend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
-- ***Additional Model Assessment***: Further work is needed to assess why missclassification is occuring between class 7 (minor theft) and classes 2, 4, and 5 (burglary, motorvehicle theft, and robbery, respectively). These crimes, given their close relationship with minor theft, likely contain features with high correlations causing our model to misclassify the crime type. More investigation is needed to extract and control for these similarities as was done between the two minor theft classes. 
+- ***Additional Model Assessment***: Further work is needed to assess the causes of missclassification between class 7 (minor theft) and classes 2, 4, and 5 (burglary, motorvehicle theft, and robbery). These crimes, given their close common them with minor theft, likely contain features with high similarly high correlations (as in the case of hour data for class 7 & 8) causing the model to misclassify the crime types. More investigation is needed to extract and control for these similarities as was done between the two minor theft classes. 
 
