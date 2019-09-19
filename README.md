@@ -300,10 +300,10 @@ The resulting confusion matrix from our final model indicates a high level of mi
 Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
 
 <p align="center">
-     <img src="images/Hour_dist._7_8.png" width="500" height="375">
+     <img src="images/Hour_dist._7_8.png" width="550" height="350">
 </p>
 <p align="center">
-     <img src="images/Hour_dist._1_4.png" width="500" height="375">
+     <img src="images/Hour_dist._1_4.png" width="550" height="350">
 </p>
 
 The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
