@@ -1,7 +1,7 @@
 # Washington, DC Crime Analysis & Predictive Modeling
 
 <p align="center">
-     <img src="images/DC.png" width="800" height="350">
+     <img src="images/DC.png" width="750" height="350">
 </p>
 
 ## Project Overview
@@ -271,7 +271,7 @@ After review of the contributing feature variables, the decision was made to rem
 
 **Feature Importance**
 
-I visualized the features importances from the initial model ranking the dimensions by their relative imporantance. Doing so extracted the top contributing features:
+I visualized the features importances from the initial model ranking the dimensions by their relative importance. Doing so extracted the top contributing features:
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
@@ -279,7 +279,7 @@ I visualized the features importances from the initial model ranking the dimensi
 
 **Confusion Matrix**
 
-I then assessed the initial model's confusion matrix which highlighted areas if high missclassification. The image below depicts a high level of missclassification between classes 7 & 8 which will be the subject of further investigation below:
+I then assessed the initial model's confusion matrix which highlighted areas if high misclassification. The image below depicts a high level of misclassification between classes 7 & 8 which will be the subject of further investigation below:
 
 <p align="center">
      <img src="images/Final_confusion_matrix.png" width="600" height="500">
@@ -287,9 +287,9 @@ I then assessed the initial model's confusion matrix which highlighted areas if 
 
 **Performance Analysis & Investigation**
 
-The resulting confusion matrix indicates a high level of missclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
+The resulting confusion matrix indicates a high level of misclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
 
-Attempts were made to look at the underlying data from the top three contributing features to assess existing similariates. High levels of similarity can lead to the model's inability to differentiate between the classes. 
+Attempts were made to look at the underlying data from the top three contributing features to assess existing similarities. High levels of similarity can lead to the model's inability to differentiate between the classes. 
 
 Beginning with the most important feature, I looked at the distribution of the 'hour' data for class 7 & 8 and compared it the distribution of a few other, unrelated crime classes: 
 
@@ -300,7 +300,7 @@ Beginning with the most important feature, I looked at the distribution of the '
      <img src="images/Hour_dist._1_4.png" width="650" height="350">
 </p>
 
-The distributions for classes 7 & 8 showed significant similarities when compared to classes 1 & 4. These similarities offer  evidence that perhaps the hour feature difficult for the model differentiate between the two classes leading to the higher levels of missclassification between the classes. 
+The distributions for classes 7 & 8 showed significant similarities when compared to classes 1 & 4. These similarities offer  evidence that perhaps the hour feature difficult for the model to differentiate between the two classes leading to the higher levels of misclassification between the classes. 
 
 I performed a similar analysis with the 2nd and 3rd most important features (latitude and longitude) and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4:
 
@@ -331,5 +331,5 @@ Though our model returned an ~89% accuracy score, more work is needed to improve
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from multiple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
 - ***Additional Classifiers***: Although we employed 5 algorithms adept at classification problems, more classifiers exist. I'd recommend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
-- ***Additional Model Assessment***: Further work is needed to assess the causes of missclassification between class 7 (minor theft) and classes 2, 4, and 5 (burglary, motorvehicle theft, and robbery). These crimes, given their close common them with minor theft, likely contain features with high similarly high correlations (as in the case of hour data for class 7 & 8) causing the model to misclassify the crime types. More investigation is needed to extract and control for these similarities as was done between the two minor theft classes. 
+- ***Additional Model Assessment***: Further work is needed to assess the causes of misclassification between class 7 (minor theft) and classes 2, 4, and 5 (burglary, motor vehicle theft, and robbery). These crimes, given their close common them with minor theft, likely contain features with high similarly high correlations (as in the case of hour data for class 7 & 8) causing the model to misclassify the crime types. More investigation is needed to extract and control for these similarities as was done between the two minor theft classes. 
 
