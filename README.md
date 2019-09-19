@@ -177,7 +177,7 @@ Further analysis was done to compare and contrast crime volumes by DC wards. A m
 Below I provide the analysis of crime by wards which offers total crime volumes & rates:
 
 <p align="center">
-     <img src="images/DC_crime_by_ward.png" width="750" height="450">
+     <img src="images/DC_crime_by_ward.png" width="800" height="550">
 </p>
 
 **Crime by Geographic Location**
