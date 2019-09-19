@@ -177,7 +177,7 @@ Further analysis was done to compare and contrast crime volumes by DC wards. A m
 Here we look at crime volumes and crime rates by ward:
 
 <p align="center">
-     <img src="images/DC_crime_by_ward.png" width="750" height="450">
+     <img src="images/DC_crime_by_ward.png" width="750" height="400">
 </p>
 
 We visualized each crime incident :
@@ -275,7 +275,7 @@ As a final measure before running our final model, I decided to remove the 'SECO
 
 ### Model Evaluation and Analysis
 
-With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our model was run once again producing accuracy score of ~85%. 
+With the optimal hyperparameters extracted, and the removal of the 'MINUTE' and 'SECOND' features, our model was run once again yielding an accuracy score of ~85%. 
 
 **Confusion Matrix**
 
@@ -287,7 +287,7 @@ I assessed the confusion matrix to visualize the model's misclassification and o
 
 **Feature Importance**
 
-And finally, I visualized the features which contributed the most predictive information when classifying crime incidents using our random forest model: 
+Additionally, I visualized the features importances which ranks the dataset dimensions carrying the most and least predictive information for classifying crime incidents: 
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
@@ -300,10 +300,10 @@ The resulting confusion matrix from our final model indicates a high level of mi
 Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
 
 <p align="center">
-     <img src="images/Hour_dist._7_8.png" width="400" height="500">
+     <img src="images/Hour_dist._7_8.png" width="500" height="375">
 </p>
 <p align="center">
-     <img src="images/Hour_dist._1_4.png" width="400" height="500">
+     <img src="images/Hour_dist._1_4.png" width="500" height="375">
 </p>
 
 The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
