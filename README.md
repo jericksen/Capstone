@@ -127,7 +127,7 @@ Note: A portion of the variation between months can be explained by the total nu
 We then took a look at total crime incidents by weekday extracting the effect, if any, of the weekday on total crime incidents:
 
 <p align="center">
-     <img src="images/Total_crime_by_weekday.png" width="700" height="400">
+     <img src="images/Total_crime_by_weekday.png" width="700" height="450">
 </p>
 
 From the analysis, its clear crime volumes do not vary by weekday in a significant way. A crime appears just as likely to occur a given weekday relative to the rest. 
@@ -177,7 +177,7 @@ Further analysis was done to compare and contrast crime volumes by DC wards. A m
 Here we look at crime volumes and crime rates by ward:
 
 <p align="center">
-     <img src="images/DC_crime_by_ward.png" width="650" height="450">
+     <img src="images/DC_crime_by_ward.png" width="750" height="450">
 </p>
 
 We visualized each crime incident :
@@ -191,7 +191,7 @@ We visualized each crime incident :
 Finally, we took a look at the exact geographical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
 
 <p align="center">
-     <img src="images/Crime_geo_location.png" width="600" height="500">
+     <img src="images/Crime_geo_location.png" width="650" height="450">
 </p>
 
 Here's a direct link to interactive graphic via Tableau Public: https://public.tableau.com/profile/jonathan.ericksen5220#!/vizhome/IncidentMap_15686551429520/MapCrimebyOffense
