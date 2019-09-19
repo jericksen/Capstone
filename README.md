@@ -90,7 +90,7 @@ The remaining dataset contained missing values within some of the feature variab
 Below is the features containing missing values: 
 
 <p align="center">
-     <img src="images/Percent_null_values.png" width="200" height="250">
+     <img src="images/Percent_null_values.png" width="250" height="300">
 </p>
 
 ***
@@ -104,7 +104,7 @@ The exploratory phase focused on two key themes: DC crime by geographical locati
 To start, we offer a graphic that highlights the total crime committed in DC from July '18 - '19. The graphic breaks down the crime counts by the type of crime committed:  
 
 <p align="center">
-     <img src="images/Total_crime_by_offense.png" width="750" height="500">
+     <img src="images/Total_crime_by_offense.png" width="700" height="450">
 </p>
 
 ### Month, Weekday, Hour Analysis
@@ -115,7 +115,8 @@ For this section, we illustrate total crime volumes by the month, weekday, and h
 
 Here, we extracted total crime incidents by month to highlight any seasonality among total crime volumes: 
 
-<img src="images/Total_crime_by_month.png" width="850" height="500">
+<p align="center">
+     <img src="images/Total_crime_by_month.png" width="700" height="400">
 
 From the data there appears to be a fairly significant seasonal effect with respect to total crime volumes in DC. The delta between the months of August (peak) and February (bottom) represents a ~31% drop in total crimes committed. 
 
@@ -126,7 +127,7 @@ Note: A portion of the variation between months can be explained by the total nu
 We then took a look at total crime incidents by weekday extracting the effect, if any, of the weekday on total crime incidents:
 
 <p align="center">
-     <img src="images/Total_crime_by_weekday.png" width="700" height="450">
+     <img src="images/Total_crime_by_weekday.png" width="700" height="400">
 </p>
 
 From the analysis, its clear crime volumes do not vary by weekday in a significant way. A crime appears just as likely to occur a given weekday relative to the rest. 
@@ -135,9 +136,13 @@ From the analysis, its clear crime volumes do not vary by weekday in a significa
 
 Our next two graphics parse the total volume of crime by hour. The goal is to highlight trends that exist in terms of crime volumes within a 24 hour cycle:
 
-<img src="images/Total_crime_by_hour.png" width="850" height="450">
+<p align="center">
+     <img src="images/Total_crime_by_hour.png" width="700" height="400">
+</p>
 
-<img src="images/Total_crime_by_hour_by_offense.png" width="850" height="450">
+<p align="center">
+     <img src="images/Total_crime_by_hour_by_offense.png" width="700" height="400">
+</p>
 
 The cyclical nature of crime incidents in DC throughout a 24 hour period are clearly indicated above with the early morning hours seeing minimal crime activity vs. the afternoon and evening hours. 
 
@@ -172,13 +177,13 @@ Further analysis was done to compare and contrast crime volumes by DC wards. A m
 Here we look at crime volumes and crime rates by ward:
 
 <p align="center">
-     <img src="images/DC_crime_by_ward.png" width="800" height="500">
+     <img src="images/DC_crime_by_ward.png" width="650" height="450">
 </p>
 
 We visualized each crime incident :
 
 <p align="center">
-     <img src="images/DC_crime_by_ward_map.png" width="800" height="600">
+     <img src="images/DC_crime_by_ward_map.png" width="600" height="450">
 </p>
 
 **Crime by Geographic Location**
@@ -186,7 +191,7 @@ We visualized each crime incident :
 Finally, we took a look at the exact geographical location of each crime that took place. I built an interactive Tableau visual which allows the user to filter the month and crime time to geo locate each instance. A screenshot is provided below:
 
 <p align="center">
-     <img src="images/Crime_geo_location.png" width="800" height="600">
+     <img src="images/Crime_geo_location.png" width="600" height="500">
 </p>
 
 Here's a direct link to interactive graphic via Tableau Public: https://public.tableau.com/profile/jonathan.ericksen5220#!/vizhome/IncidentMap_15686551429520/MapCrimebyOffense
@@ -295,10 +300,10 @@ The resulting confusion matrix from our final model indicates a high level of mi
 Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
 
 <p align="center">
-     <img src="images/Hour_dist._7_8.png" width="700" height="500">
+     <img src="images/Hour_dist._7_8.png" width="400" height="500">
 </p>
 <p align="center">
-     <img src="images/Hour_dist._1_4.png" width="700" height="500">
+     <img src="images/Hour_dist._1_4.png" width="400" height="500">
 </p>
 
 The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
@@ -308,7 +313,7 @@ I performed the same analysis with the 2nd and 3rd most important features and f
 Based on the above analysis, and due to the similar nature of class 7 & 8 with respect to the type of crime, the decision was made to combine these classes into one and reassess the model's performance. Doing so increased the models accuracy score to ~89%. The resulting confusion matrix is provided below: 
 
 <p align="center">
-     <img src="images/Final_confusion_matrix_2.png" width="500" height="500">
+     <img src="images/Final_confusion_matrix_2.png" width="600" height="500">
 </p>
 
 ***
