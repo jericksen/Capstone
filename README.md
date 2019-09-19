@@ -300,15 +300,17 @@ The resulting confusion matrix from our final model indicates a high level of mi
 Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the the data that has led to our model's inability to differentiate between the classes. To begin this analysis, I took a look at the distribution of the 'hour' feature for class 7 & 8 and compared the distribution to a few other, unrelated crime types. 
 
 <p align="center">
-     <img src="images/Hour_dist._7_8.png" width="550" height="350">
+     <img src="images/Hour_dist._7_8.png" width="650" height="350">
 </p>
 <p align="center">
-     <img src="images/Hour_dist._1_4.png" width="550" height="350">
+     <img src="images/Hour_dist._1_4.png" width="650" height="350">
 </p>
 
 The distribution of hour data for classes 7 & 8 showed significant similarities compared to classed 1 & 4. This offers a clear indication that the hour feature is difficult to defferentiate by the random forest model leading to high misclassification. 
 
 I performed the same analysis with the 2nd and 3rd most important features and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4. 
+
+**Final Model**
 
 Based on the above analysis, and due to the similar nature of class 7 & 8 with respect to the type of crime, the decision was made to combine these classes into one and reassess the model's performance. Doing so increased the models accuracy score to ~89%. The resulting confusion matrix is provided below: 
 
@@ -324,15 +326,16 @@ This project includes more than was highlighted in the README above. The additio
 
 The data analysis more or less speaks for itself. Throughout the project, we provided insights into some elements of criminal behavior within the District of Columbia. We looked at geographical crime distributions as well as distributions among certain time parameters.
 
-The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~85% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve its performance. 
+The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model the existing data producing a crime classification model which yielded an ~89% accuracy score. The logical next step is to further iterate on the existing model hyperparameters in an attempt to further improve its performance. 
 
 Going forward, the DC Police Department should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime instantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
 
 **Further Work**
 
-Though our model returned an ~85% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work in an attempt to achieve a better model performance: 
+Though our model returned an ~89% accuracy score, more work is needed to improve the performance before any real world application of this model would suffice. Below I offer recommendations for further work in an attempt to achieve a better model performance: 
 
 - ***More Features***: Acquire additional data containing features such as school districts, mass transit station station stops, socioeconomic data, et cetera. These additional features, along with many potential others, may contain predictive information that might contribute to better model performance. 
 - ***More Training Data***: For this project, we trained our model using 2018 and 2019 YTD crime data. Further attempts to improve the model should include fitting the parameters using data from multiple years. Doing so is costly in terms of processing power and time, but the improvements in accuracy may be worth the effort. 
 - ***Additional Classifiers***: Although we employed 5 algorithms adept at classification problems, more classifiers exist. I'd recommend testing additional, perhaps less popular, classifying algorithms to rule out Random Forests as our peak performer given these data.
+- ***Additional Model Assessment***: 
 
