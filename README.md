@@ -243,11 +243,7 @@ The additional steps for engineering our features included the following:
      
 ### Model Selection
 
-With our data conditioned, features engineered for modeling and our class labels encoded, the data was ready for modeling. 
-
-**Model Comparison**
-
-We began the modeling portion by instantiating the following classifiers for side by side performance evaluation using each model's default hyperparameters: 
+With our data conditioned, features engineered for modeling and our class labels encoded, the data was ready for modeling. We began the modeling portion by instantiating the following classifiers for side by side performance evaluation using each model's default hyperparameters: 
 
 - K Nearest Neighbors
 - Decision Trees
@@ -265,15 +261,17 @@ With the resulting model performances above, I chose to proceed using the random
 
 The next step was to improve the existing random forest model by running SKlearn's GridSearchCV on a number of test input hyperparameters. By doing so, we extracted the best hyperparameters resulting in an improved accuracy score of ~85%. 
 
-**Feature Reduction:**
-
-After a final review of the contributing feature variables, I decided to remove the 'SECOND' and 'MINUTE' dimensions as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions.
-
 ### Model Evaluation, Analysis & Improvements
+
+The following includes steps taken to assess and improve the initial model's performance. 
+
+**Feature Elimination**
+
+After review of the contributing feature variables, the decision was made to remove the 'SECOND' and 'MINUTE' dimensions as such granular data regarding the exact timing of a crime is likely prone to error or human influence. The resulting feature set included 19 dimensions.
 
 **Feature Importance**
 
-With the latest model run, I chose to visualize the features importances ranking the dimensions which carry the most and least predictive signal:
+I visualized the features importances from the initial model ranking the dimensions by their relative imporantance. Doing so extracted the top contributing features:
 
 <p align="center">
      <img src="images/Final_feature_importance.png" width="700" height="500">
@@ -281,7 +279,7 @@ With the latest model run, I chose to visualize the features importances ranking
 
 **Confusion Matrix**
 
-I then assessed the confusion matrix to visualize the model's misclassification and overall performance. The image below depicts a high level of missclassification between classes 7 & 8 which will be the subject of further investigation below:
+I then assessed the initial model's confusion matrix which highlighted areas if high missclassification. The image below depicts a high level of missclassification between classes 7 & 8 which will be the subject of further investigation below:
 
 <p align="center">
      <img src="images/Final_confusion_matrix.png" width="600" height="500">
@@ -291,7 +289,9 @@ I then assessed the confusion matrix to visualize the model's misclassification 
 
 The resulting confusion matrix indicates a high level of missclassification between class 7 & 8. These classes represent theft from automobiles and theft that is classified as 'other'. For both classes, minor theft is the underlying theme. 
 
-Attempts were made to look at the underlying data from the top three contributing features and assess similariates within the data leading to the model's inability to differentiate between the classes. To begin this analysis, I looked at the distribution of the 'hour' feature for class 7 & 8 and compared it the distribution of a few other, unrelated crime classes. 
+Attempts were made to look at the underlying data from the top three contributing features to assess existing similariates. High levels of similarity can lead to the model's inability to differentiate between the classes. 
+
+Beginning with the most important feature, I looked at the distribution of the 'hour' data for class 7 & 8 and compared it the distribution of a few other, unrelated crime classes: 
 
 <p align="center">
      <img src="images/Hour_dist._7_8.png" width="650" height="350">
@@ -300,9 +300,9 @@ Attempts were made to look at the underlying data from the top three contributin
      <img src="images/Hour_dist._1_4.png" width="650" height="350">
 </p>
 
-The distributions for classes 7 & 8 showed significant similarities compared to classes 1 & 4. This offers clear indications that the hour feature is difficult to differentiate by the random forest model which has led to higher levels of missclassification.
+The distributions for classes 7 & 8 showed significant similarities when compared to classes 1 & 4. These similarities offer  evidence that perhaps the hour feature difficult for the model differentiate between the two classes leading to the higher levels of missclassification between the classes. 
 
-I performed the same analysis with the 2nd and 3rd most important (latitude and longitude) features and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4. 
+I performed a similar analysis with the 2nd and 3rd most important features (latitude and longitude) and found class 7 & 8 exhibited similar distributions with respect to classes 1 and 4:
 
 **Final Model**
 
