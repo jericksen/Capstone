@@ -29,7 +29,7 @@ For both parts, we'll walk through the highlights as well as the methods used fo
  - SKlearn
  - Seaborn
  - Tableau (interactive visualizations)
-     - Direct link to Tableau Public profile housing many of the Tableau graphics used throughout this project: https://public.tableau.com/profile/jonathan.ericksen5220#!/
+     - Direct link to Tableau public profile housing many of the Tableau graphics used throughout this project: https://public.tableau.com/profile/jonathan.ericksen5220#!/
 
 ***
 
@@ -71,7 +71,7 @@ The following features were removed due to their ambiguity, redundancy with othe
 
 **Features Split for Modeling Purposes** 
 
-The following features were split into their component parts for visualization purposes, i.e., 'DATE' --> 'DAY, 'MONTH, 'YEAR'): 
+The following features were split into their component parts for visualization purposes, i.e., 'DATE' --> 'DAY, 'MONTH', 'YEAR'): 
 
 - 'DATE'
 - 'TIME'
@@ -188,7 +188,7 @@ Finally, we took a look at the exact geographical location of each crime that to
      <img src="images/Crime_geo_location.png" width="650" height="450">
 </p>
 
-Here's a direct link to interactive graphic via Tableau Public: https://public.tableau.com/profile/jonathan.ericksen5220#!/vizhome/IncidentMap_15686551429520/MapCrimebyOffense
+Here's a direct link to interactive graphic via Tableau public: https://public.tableau.com/profile/jonathan.ericksen5220#!/vizhome/IncidentMap_15686551429520/MapCrimebyOffense
 
 ***
 
@@ -251,7 +251,7 @@ With our data conditioned, features engineered for modeling and our class labels
 - Random Forests
 - Ada Boost
 
-The models were run using a training set containing ~167k instances from our rebalanced data. The dataset was split 20 times using Kfold and assessed against the training labels using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instances' cross validation scores. Below we include the results of our intial model comparisons: 
+The models were run using a training set containing ~167k instances from our rebalanced data. The dataset was split 20 times using Kfold and assessed against the training labels using the scoring metric 'Accuracy'. We then plotted the mean and standard deviation of the 20 training instance's cross validation scores. Below we include the results of our initial model comparisons: 
 
 <p align="center">
      <img src="images/Model_cv_scores.png" width="500" height="450">
