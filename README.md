@@ -322,7 +322,7 @@ The data analysis more or less speaks for itself. Throughout the project, we pro
 
 The modeling portion, and its implications, require further investigation and work to improve the overall performance. We were able to successfully massage and model using the existing data producing a crime classification model yielding a ~89% accuracy score. The logical next step is to further iterate on the existing model hyperparameters and features in an attempt to further improve its performance. 
 
-Going forward, the DC Police Department should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know, for instance, that given a crime's particular location, time of day, date, et cetera, we may be able to predict the type of crime instantaneously and thus mobilize the appropriate resources to apprehend the perpetrator(s). 
+Going forward, the DC Police Department should consider replicating parts of this project in an effort to better allocate resources beginning at the very instant a crime occurs. Should we know a given a crime's particular location, time of day, date, et cetera, we could then predict the type of crime affording the police department the information necessary to mobilize the appropriate resources more quickly thus increasing the chances of apprehending the perpetrator(s).
 
 **Further Work**
 
